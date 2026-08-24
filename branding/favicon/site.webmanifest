@@ -1,0 +1,20 @@
+{
+  "name": "Zenith Wills Technologies",
+  "short_name": "Zenith Wills",
+  "description": "Professional solar, CCTV, car tracking, intercom and networking installation.",
+  "icons": [
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#0F1523",
+  "background_color": "#0F1523",
+  "display": "standalone"
+}
