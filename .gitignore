@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local-only docs & raw source assets (copied into public/ when needed)
+PRD.md
+PRD.docx
+branding/video/
+branding/images/
