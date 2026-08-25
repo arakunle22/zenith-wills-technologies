@@ -2,18 +2,20 @@
 
 @theme {
   /* Brand (from the real logo) */
-  --color-primary: #0090f0; /* blue */
-  --color-primary-soft: #3aa9ff;
-  --color-accent: #60d818; /* green */
-  --color-accent-soft: #86e94a;
+  --color-primary: #0090f0;      /* blue — links, secondary accents */
+  --color-primary-deep: #0070c0;
+  --color-accent: #60d818;       /* green — primary CTA, badges */
+  --color-accent-deep: #45ad12;  /* deeper green — readable text on white */
 
-  /* Dark surfaces */
-  --color-ink: #04070d;   /* page background */
-  --color-ink-2: #0a1322; /* cards / elevated surfaces */
+  /* Light surfaces */
+  --color-paper: #ffffff;        /* page background */
+  --color-surface: #f4f6f9;      /* alternating sections / cards */
+  --color-line: #e6ebf1;         /* hairlines / borders */
 
   /* Text */
-  --color-frost: #eaf2f9;
-  --color-mist: #93a7bb;
+  --color-ink: #0b1526;          /* headings */
+  --color-mist: #54657c;         /* body / muted */
+  --color-frost: #ffffff;        /* text over image/dark overlays */
 
   /* Fonts */
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
@@ -25,8 +27,8 @@ html {
 }
 
 body {
-  background-color: var(--color-ink);
-  color: var(--color-frost);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -38,5 +40,5 @@ body {
 }
 
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: var(--color-ink); }
-::-webkit-scrollbar-thumb { background: #1b2a42; border-radius: 999px; }
+::-webkit-scrollbar-track { background: var(--color-surface); }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }

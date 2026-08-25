@@ -3,10 +3,11 @@ import { cn } from "@/lib/utils";
 
 const variants = {
   accent:
-    "bg-accent text-ink hover:bg-accent-soft shadow-[0_0_36px_-10px] shadow-accent/70",
-  primary: "bg-primary text-frost hover:bg-primary-soft",
+    "bg-accent text-ink hover:bg-accent-deep hover:text-white shadow-sm",
+  primary: "bg-primary text-white hover:bg-primary-deep",
   outline:
-    "border border-frost/20 text-frost hover:border-accent/70 hover:text-accent",
+    "border border-line text-ink hover:border-primary hover:text-primary",
+  ghost: "text-mist hover:text-ink",
 } as const;
 
 const sizes = {

@@ -22,7 +22,7 @@ export function LogoMark({
 
 export function Wordmark({
   className,
-  onDark = true,
+  onDark = false,
 }: {
   className?: string;
   onDark?: boolean;
@@ -40,7 +40,7 @@ export function Wordmark({
       <span
         className={cn(
           "mt-1 text-[0.6rem] font-semibold uppercase tracking-[0.35em]",
-          onDark ? "text-accent" : "text-ink/60",
+          onDark ? "text-accent" : "text-accent-deep",
         )}
       >
         Technologies
@@ -51,7 +51,7 @@ export function Wordmark({
 
 export function Brand({
   className,
-  onDark = true,
+  onDark = false,
   markClassName = "h-9",
 }: {
   className?: string;
