@@ -7,7 +7,7 @@ export function Reveal({
   children,
   className,
   delay = 0,
-  y = 24,
+  y = 16,
 }: {
   children: ReactNode;
   className?: string;
@@ -21,7 +21,7 @@ export function Reveal({
       initial={reduce ? undefined : { opacity: 0, y }}
       whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.6, delay, ease: "easeOut" }}
+      transition={{ duration: 0.5, delay, ease: "easeOut" }}
     >
       {children}
     </motion.div>
