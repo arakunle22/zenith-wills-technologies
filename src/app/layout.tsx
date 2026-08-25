@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import { site } from "@/config/site";
+import { ScrollProgress } from "@/components/scroll-progress";
 import "./globals.css";
 
 const display = Space_Grotesk({
@@ -85,6 +86,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         {children}
+        <ScrollProgress />
       </body>
     </html>
   );
