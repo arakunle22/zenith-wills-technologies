@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#04070d"/>
-  <path d="M18 20 H46 L18 40 H46" fill="none" stroke="#0090f0" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M18 47 C 26 44, 38 44, 46 47" fill="none" stroke="#60d818" stroke-width="3.5" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Zenith Wills Technologies">
+  <rect width="120" height="120" rx="28" fill="#04070D"/>
+  <rect width="118" height="118" x="1" y="1" rx="27" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="2"/>
+  <path d="M60.22 29.25 L76.39 52.52 L71.8 59.07 L60.22 41.05 L52.79 51.75 L79.77 90.64 L43.07 90.75 L38.15 83.11 L64.15 83 L43.94 52.63 Z" fill="#0296FA"/>
+  <polygon points="41.16,60.6 45.69,67.26 29.85,90.75 21,90.64" fill="#73DE1C"/>
+  <polygon points="79.28,60.6 99,90.75 89.82,90.75 74.53,67.26" fill="#73DE1C"/>
 </svg>
+
