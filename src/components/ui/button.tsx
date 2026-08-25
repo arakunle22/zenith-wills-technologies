@@ -7,8 +7,6 @@ const variants = {
   primary: "bg-primary text-frost hover:bg-primary-soft",
   outline:
     "border border-frost/20 text-frost hover:border-accent/70 hover:text-accent",
-  outlineOnLight:
-    "border border-ink/20 text-ink hover:border-primary hover:text-primary",
 } as const;
 
 const sizes = {

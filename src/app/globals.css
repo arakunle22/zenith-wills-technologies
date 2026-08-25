@@ -7,18 +7,13 @@
   --color-accent: #60d818; /* green */
   --color-accent-soft: #86e94a;
 
-  /* Dark surfaces (near-black navy) */
-  --color-ink: #04070d;
-  --color-ink-2: #0a1322;
-  --color-ink-3: #111d30;
+  /* Dark surfaces */
+  --color-ink: #04070d;   /* page background */
+  --color-ink-2: #0a1322; /* cards / elevated surfaces */
 
   /* Text */
   --color-frost: #eaf2f9;
   --color-mist: #93a7bb;
-
-  /* Light surfaces (for the dark -> light shift) */
-  --color-paper: #f5f8fb;
-  --color-ink-on-paper: #0a1322;
 
   /* Fonts */
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
@@ -42,7 +37,6 @@ body {
   color: var(--color-ink);
 }
 
-/* thin dark scrollbar */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--color-ink); }
 ::-webkit-scrollbar-thumb { background: #1b2a42; border-radius: 999px; }
