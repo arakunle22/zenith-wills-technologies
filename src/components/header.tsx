@@ -21,18 +21,20 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const isHeaderOnDark = !scrolled && !open;
+
   return (
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled || open
-          ? "border-b border-line bg-white/85 backdrop-blur-md"
+          ? "border-b border-line bg-white/90 shadow-xs backdrop-blur-md"
           : "bg-transparent",
       )}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <Link href="/" aria-label={site.name}>
-          <Brand markClassName="h-8" />
+          <Brand onDark={isHeaderOnDark} markClassName="h-8" />
         </Link>
 
         <nav className="hidden items-center gap-7 md:flex">
@@ -44,7 +46,13 @@ export function Header() {
                 href={item.href}
                 className={cn(
                   "text-sm font-medium transition-colors",
-                  active ? "text-primary" : "text-mist hover:text-ink",
+                  isHeaderOnDark
+                    ? active
+                      ? "font-semibold text-accent"
+                      : "text-frost/85 hover:text-frost"
+                    : active
+                      ? "font-semibold text-primary"
+                      : "text-mist hover:text-ink",
                 )}
               >
                 {item.label}
@@ -64,14 +72,14 @@ export function Header() {
         </div>
 
         <button
-          className="md:hidden"
+          className="md:hidden transition-colors"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
           {open ? (
-            <X className="h-6 w-6 text-ink" />
+            <X className={cn("h-6 w-6", isHeaderOnDark ? "text-frost" : "text-ink")} />
           ) : (
-            <Menu className="h-6 w-6 text-ink" />
+            <Menu className={cn("h-6 w-6", isHeaderOnDark ? "text-frost" : "text-ink")} />
           )}
         </button>
       </div>
