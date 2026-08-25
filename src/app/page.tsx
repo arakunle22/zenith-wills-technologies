@@ -1,25 +1,27 @@
-import { Header } from "@/components/sections/header";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { FloatingWhatsApp } from "@/components/floating-whatsapp";
 import { Hero } from "@/components/sections/hero";
 import { Services } from "@/components/sections/services";
+import { Showcase } from "@/components/sections/showcase";
 import { WhyUs } from "@/components/sections/why-us";
 import { Process } from "@/components/sections/process";
-import { Contact } from "@/components/sections/contact";
-import { Footer } from "@/components/sections/footer";
-import { ChargeMeter } from "@/components/charge-meter";
+import { Cta } from "@/components/sections/cta";
 
 export default function Home() {
   return (
-    <div className="relative">
+    <>
       <Header />
       <main>
         <Hero />
         <Services />
+        <Showcase />
         <WhyUs />
         <Process />
-        <Contact />
+        <Cta />
       </main>
       <Footer />
-      <ChargeMeter />
-    </div>
+      <FloatingWhatsApp />
+    </>
   );
 }

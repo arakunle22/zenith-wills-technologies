@@ -18,7 +18,10 @@ const title =
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title,
+  title: {
+    default: title,
+    template: "%s — Zenith Wills Technologies",
+  },
   description: site.description,
   keywords: [
     "solar inverter",
