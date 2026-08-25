@@ -1,12 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Reveal } from "@/components/ui/reveal";
+import { WorkCarousel } from "@/components/work-carousel";
 import { site } from "@/config/site";
 
 export function Showcase() {
-  const { videos, gallery } = site.work;
+  const { videos, projects } = site.work;
   return (
     <section className="bg-surface py-20 sm:py-24">
       <Container>
@@ -14,7 +14,7 @@ export function Showcase() {
           <SectionHeading
             eyebrow="Our work"
             title="See the systems we install."
-            subtitle="A look at recent installations and the environments we work in."
+            subtitle="Browse recent installations, then watch short clips from the field."
           />
           <Link
             href="/work"
@@ -24,7 +24,11 @@ export function Showcase() {
           </Link>
         </div>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="mt-12">
+          <WorkCarousel items={projects} />
+        </div>
+
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
           {videos.map((v, i) => (
             <Reveal key={v.src} delay={i * 0.05} className="h-full">
               <div className="h-full overflow-hidden rounded-2xl border border-line bg-white">
@@ -42,24 +46,6 @@ export function Showcase() {
                     {v.tag}
                   </span>
                 </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-
-        <div className="mt-5 grid grid-cols-2 gap-5 sm:grid-cols-3">
-          {gallery.slice(0, 3).map((g, i) => (
-            <Reveal key={g.src} delay={i * 0.05}>
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-line">
-                <Image
-                  src={g.src}
-                  alt={g.tag}
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-ink">
-                  {g.tag}
-                </span>
               </div>
             </Reveal>
           ))}

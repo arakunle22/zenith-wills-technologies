@@ -93,13 +93,13 @@ export const site = {
       { src: "/videos/work-1.mp4", title: "Recent installation", tag: "Our work" },
       { src: "/videos/work-2.mp4", title: "Recent installation", tag: "Our work" },
     ],
-    gallery: [
-      { src: "/images/rooftop.jpg", tag: "Solar" },
-      { src: "/images/cctv.jpg", tag: "CCTV" },
-      { src: "/images/network.jpg", tag: "Networking" },
-      { src: "/images/tracker.jpg", tag: "Tracking" },
-      { src: "/images/intercom.jpg", tag: "Intercom" },
-      { src: "/images/work-extra.jpg", tag: "Installation" },
+    projects: [
+      { src: "/images/work/work-1.jpg", alt: "Recent project photo 1" },
+      { src: "/images/work/work-2.jpg", alt: "Recent project photo 2" },
+      { src: "/images/work/work-3.jpg", alt: "Recent project photo 3" },
+      { src: "/images/work/work-4.jpg", alt: "Recent project photo 4" },
+      { src: "/images/work/work-5.jpg", alt: "Recent project photo 5" },
+      { src: "/images/work/work-6.jpg", alt: "Recent project photo 6" },
     ],
   },
   about: {
