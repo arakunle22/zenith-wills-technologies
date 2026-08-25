@@ -1,8 +1,8 @@
 "use client";
-import { useState, useCallback } from "react";
+import { useRef, useState, useCallback } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "motion/react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export type CarouselItem = { src: string; alt: string };
@@ -10,17 +10,21 @@ export type CarouselItem = { src: string; alt: string };
 export function WorkCarousel({
   items,
   className,
+  onImageClick,
 }: {
   items: readonly CarouselItem[];
   className?: string;
+  onImageClick?: (item: CarouselItem) => void;
 }) {
   const [index, setIndex] = useState(0);
+  const moved = useRef(false);
   const go = useCallback(
     (d: number) => setIndex((i) => (i + d + items.length) % items.length),
     [items.length],
   );
 
   if (!items.length) return null;
+  const current = items[index];
 
   return (
     <div className={cn("relative", className)}>
@@ -35,18 +39,32 @@ export function WorkCarousel({
             drag="x"
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.4}
+            onDragStart={() => {
+              moved.current = false;
+            }}
+            onDrag={(_, info) => {
+              if (Math.abs(info.offset.x) > 8) moved.current = true;
+            }}
             onDragEnd={(_, info) => {
               if (info.offset.x < -70) go(1);
               else if (info.offset.x > 70) go(-1);
             }}
-            className="absolute inset-0 z-0 cursor-grab active:cursor-grabbing"
+            onClick={() => {
+              if (!moved.current) onImageClick?.(current);
+            }}
+            className={cn(
+              "absolute inset-0 z-0",
+              onImageClick
+                ? "cursor-zoom-in"
+                : "cursor-grab active:cursor-grabbing",
+            )}
           >
             <Image
-              src={items[index].src}
-              alt={items[index].alt}
+              src={current.src}
+              alt={current.alt}
               fill
               sizes="(max-width: 640px) 100vw, 900px"
-              className="object-cover"
+              className="object-contain p-1"
               draggable={false}
               priority={index === 0}
             />
@@ -71,6 +89,16 @@ export function WorkCarousel({
         >
           <ChevronRight className="h-5 w-5" />
         </button>
+
+        {onImageClick && (
+          <button
+            onClick={() => onImageClick(current)}
+            aria-label="View full image"
+            className="absolute bottom-3 right-3 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-ink shadow-sm transition hover:bg-white hover:text-primary"
+          >
+            <Maximize2 className="h-5 w-5" />
+          </button>
+        )}
       </div>
 
       <div className="mt-4 flex justify-center gap-2">
