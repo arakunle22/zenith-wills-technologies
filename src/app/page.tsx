@@ -13,13 +13,9 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        {/* power-on: dark -> light transition */}
-        <div aria-hidden className="h-24 bg-gradient-to-b from-ink to-paper" />
         <Services />
         <WhyUs />
         <Process />
-        {/* power-down: light -> dark transition */}
-        <div aria-hidden className="h-24 bg-gradient-to-b from-paper to-ink" />
         <Contact />
       </main>
       <Footer />
