@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { ReactNode } from "react";
 import { Space_Grotesk, Inter } from "next/font/google";
 import { site } from "@/config/site";
 import { ScrollProgress } from "@/components/scroll-progress";
@@ -77,7 +78,7 @@ const structuredData = {
   })),
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body className="min-h-screen font-body">
