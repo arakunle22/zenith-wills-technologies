@@ -7,6 +7,7 @@ import {
   useTransform,
   useMotionValueEvent,
 } from "motion/react";
+import { Zap } from "lucide-react";
 
 export function ScrollProgress() {
   const { scrollYProgress } = useScroll();
@@ -21,6 +22,10 @@ export function ScrollProgress() {
 
   return (
     <div className="fixed right-5 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-center gap-3 lg:flex">
+      <Zap
+        aria-hidden="true"
+        className="h-5 w-5 animate-pulse fill-amber-400 text-amber-400 drop-shadow-[0_0_8px_rgba(251,191,36,0.75)]"
+      />
       <span className="font-display text-[11px] font-semibold tabular-nums tracking-widest text-accent-deep">
         {pct}%
       </span>
