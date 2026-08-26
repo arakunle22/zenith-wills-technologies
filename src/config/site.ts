@@ -3,27 +3,29 @@ export const site = {
   shortName: "Zenith Wills",
   tagline: "We power what matters.",
   description:
+    process.env.NEXT_PUBLIC_SITE_DESCRIPTION ??
     "Professional installation of solar power inverters, CCTV cameras, car trackers, intercoms and system networking across Lagos, Nigeria.",
-  url: "https://zenithwillstechnologies.com",
-  phone: { display: "081-2829-3556", tel: "+2348128293556" },
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://zenithwillstechnologies.com",
+  phone: {
+    display: process.env.NEXT_PUBLIC_PHONE_DISPLAY ?? "081-2829-3556",
+    tel: process.env.NEXT_PUBLIC_PHONE_TEL ?? "+2348128293556",
+  },
   whatsapp: {
-    href: "https://wa.me/2348128293556?text=Hello%20Zenith%20Wills%2C%20I%27d%20like%20to%20book%20a%20service.",
+    href: `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "2348128293556"}?text=Hello%20Zenith%20Wills%2C%20I%27d%20like%20to%20book%20a%20service.`,
     label: "Chat on WhatsApp",
   },
   address: {
-    locality: "Lagos",
-    region: "Lagos State",
-    country: "NG",
+    locality: process.env.NEXT_PUBLIC_ADDRESS_LOCALITY ?? "Lagos",
+    region: process.env.NEXT_PUBLIC_ADDRESS_REGION ?? "Lagos State",
+    country: process.env.NEXT_PUBLIC_ADDRESS_COUNTRY ?? "NG",
   },
-  areasServed: [
-    "Badagry",
-    "Egan",
-    "Ikotun",
-    "Alimosho",
-    "LASU",
-    "Mile 2",
-    "Lagos",
-  ],
+  areasServed: (
+    process.env.NEXT_PUBLIC_AREAS_SERVED ??
+    "Badagry,Egan,Ikotun,Alimosho,LASU,Mile 2,Lagos"
+  )
+    .split(",")
+    .map((s) => s.trim()),
   faqs: [
     {
       question: "Which areas do you serve?",
