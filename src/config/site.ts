@@ -1,3 +1,6 @@
+const socialHandle =
+  process.env.NEXT_PUBLIC_SOCIAL_HANDLE ?? "zenithwillstechnologies";
+
 export const site = {
   name: "Zenith Wills Technologies",
   shortName: "Zenith Wills",
@@ -23,6 +26,24 @@ export const site = {
     country: process.env.NEXT_PUBLIC_ADDRESS_COUNTRY ?? "NG",
     countryName: "Nigeria",
   },
+  social: [
+    {
+      name: "TikTok",
+      icon: "tiktok",
+      href: `https://www.tiktok.com/@${socialHandle}`,
+    },
+    {
+      name: "Instagram",
+      icon: "instagram",
+      href: `https://www.instagram.com/${socialHandle}`,
+    },
+    {
+      name: "Facebook",
+      icon: "facebook",
+      href: `https://www.facebook.com/${socialHandle}`,
+    },
+    { name: "X", icon: "x", href: `https://x.com/${socialHandle}` },
+  ],
   areasServed: (
     process.env.NEXT_PUBLIC_AREAS_SERVED ??
     "Badagry,Egan,Ikotun,Alimosho,LASU,Mile 2,Lagos"

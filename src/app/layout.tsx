@@ -4,6 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Space_Grotesk, Inter } from "next/font/google";
 import { site } from "@/config/site";
 import { ScrollProgress } from "@/components/scroll-progress";
+import { TopBanner } from "@/components/top-banner";
 import "./globals.css";
 
 const display = Space_Grotesk({
@@ -75,6 +76,7 @@ const structuredData = {
       name: site.name,
       url: site.url,
       logo: `${site.url}/logo.png`,
+      sameAs: site.social.map((s) => s.href),
       description: site.description,
       telephone: site.phone.tel,
       address: {
@@ -99,6 +101,7 @@ const structuredData = {
       description: site.description,
       url: site.url,
       image: `${site.url}/logo.png`,
+      sameAs: site.social.map((s) => s.href),
       telephone: site.phone.tel,
       priceRange: "$$",
       address: {
@@ -142,6 +145,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <TopBanner />
         {children}
         <ScrollProgress />
       </body>
