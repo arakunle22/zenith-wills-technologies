@@ -3,13 +3,59 @@ export const site = {
   shortName: "Zenith Wills",
   tagline: "We power what matters.",
   description:
-    "Professional installation of solar power inverters, CCTV cameras, car trackers, intercoms and system networking across Nigeria.",
-  url: "https://zenithwills.ng",
+    "Professional installation of solar power inverters, CCTV cameras, car trackers, intercoms and system networking across Lagos, Nigeria.",
+  url: "https://zenithwillstechnologies.com",
   phone: { display: "081-2829-3556", tel: "+2348128293556" },
   whatsapp: {
     href: "https://wa.me/2348128293556?text=Hello%20Zenith%20Wills%2C%20I%27d%20like%20to%20book%20a%20service.",
     label: "Chat on WhatsApp",
   },
+  address: {
+    locality: "Lagos",
+    region: "Lagos State",
+    country: "NG",
+  },
+  areasServed: [
+    "Badagry",
+    "Egan",
+    "Ikotun",
+    "Alimosho",
+    "LASU",
+    "Mile 2",
+    "Lagos",
+  ],
+  faqs: [
+    {
+      question: "Which areas do you serve?",
+      answer:
+        "We serve Lagos and its surroundings — including Badagry, Egan, Ikotun, Alimosho, LASU, Mile 2 and every corner of Lagos. If you're nearby, reach out and we'll confirm we can reach you.",
+    },
+    {
+      question: "How much does an installation cost?",
+      answer:
+        "It depends on your space and what you need. We assess your site and give you a clear, itemised quote before any work begins — no surprises.",
+    },
+    {
+      question: "How do I book a service?",
+      answer:
+        "Message us on WhatsApp or call 081-2829-3556. We'll arrange a site assessment, then send a clear quote.",
+    },
+    {
+      question: "Do you provide after-install support?",
+      answer:
+        "Yes. We stay reachable once the job is done, for follow-up and support when you need it.",
+    },
+    {
+      question: "Can I monitor my system from my phone?",
+      answer:
+        "Where the system supports it — CCTV live view and GPS tracking — we set it up and show you how to monitor it from your phone.",
+    },
+    {
+      question: "Do you work with businesses and estates?",
+      answer:
+        "Yes. We install for homes, offices and estates across Lagos.",
+    },
+  ],
   nav: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },

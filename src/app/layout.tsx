@@ -34,6 +34,13 @@ export const metadata: Metadata = {
     "intercom",
     "network installation",
     "Zenith Wills Technologies",
+    "Lagos",
+    "Badagry",
+    "Egan",
+    "Ikotun",
+    "Alimosho",
+    "LASU",
+    "Mile 2",
     "Nigeria",
   ],
   alternates: { canonical: "/" },
@@ -61,22 +68,68 @@ export const metadata: Metadata = {
 
 const structuredData = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: site.name,
-  description: site.description,
-  url: site.url,
-  image: `${site.url}/logo.png`,
-  telephone: site.phone.tel,
-  priceRange: "$$",
-  areaServed: { "@type": "Country", name: "Nigeria" },
-  makesOffer: site.services.map((s) => ({
-    "@type": "Offer",
-    itemOffered: {
-      "@type": "Service",
-      name: s.title,
-      description: s.description,
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${site.url}/#organization`,
+      name: site.name,
+      url: site.url,
+      logo: `${site.url}/logo.png`,
+      description: site.description,
+      telephone: site.phone.tel,
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: site.address.locality,
+        addressRegion: site.address.region,
+        addressCountry: site.address.country,
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: site.phone.tel,
+        contactType: "customer service",
+        areaServed: "NG",
+        availableLanguage: "English",
+      },
     },
-  })),
+    {
+      "@type": "LocalBusiness",
+      "@id": `${site.url}/#localbusiness`,
+      name: site.name,
+      description: site.description,
+      url: site.url,
+      image: `${site.url}/logo.png`,
+      telephone: site.phone.tel,
+      priceRange: "$$",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: site.address.locality,
+        addressRegion: site.address.region,
+        addressCountry: site.address.country,
+      },
+      areaServed: site.areasServed.map((name) => ({
+        "@type": "AdministrativeArea",
+        name,
+      })),
+      makesOffer: site.services.map((s) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: s.title,
+          description: s.description,
+          provider: { "@id": `${site.url}/#organization` },
+          areaServed: site.address.locality,
+        },
+      })),
+      parentOrganization: { "@id": `${site.url}/#organization` },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${site.url}/#website`,
+      url: site.url,
+      name: site.name,
+      publisher: { "@id": `${site.url}/#organization` },
+    },
+  ],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
