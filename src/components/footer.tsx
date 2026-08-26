@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Brand } from "@/components/logo";
 import { WhatsAppIcon } from "@/components/whatsapp-icon";
+import { SocialIcon } from "@/components/social-icon";
 import { site } from "@/config/site";
 
 export function Footer() {
@@ -78,6 +79,20 @@ export function Footer() {
                 </a>
               </li>
             </ul>
+            <div className="mt-5 flex items-center gap-2.5">
+              {site.social.map((s) => (
+                <a
+                  key={s.name}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.name}
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-frost/80 transition hover:bg-accent hover:text-ink"
+                >
+                  <SocialIcon name={s.icon} className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 

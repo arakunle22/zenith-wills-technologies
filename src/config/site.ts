@@ -1,15 +1,87 @@
+const socialHandle =
+  process.env.NEXT_PUBLIC_SOCIAL_HANDLE ?? "zenithwillstechnologies";
+
 export const site = {
   name: "Zenith Wills Technologies",
   shortName: "Zenith Wills",
   tagline: "We power what matters.",
   description:
-    "Professional installation of solar power inverters, CCTV cameras, car trackers, intercoms and system networking across Nigeria.",
-  url: "https://zenithwills.ng",
-  phone: { display: "081-2829-3556", tel: "+2348128293556" },
+    process.env.NEXT_PUBLIC_SITE_DESCRIPTION ??
+    "Professional installation of solar power inverters, CCTV cameras, car trackers, intercoms and system networking across Lagos, Nigeria.",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://zenithwillstechnologies.com",
+  phone: {
+    display: process.env.NEXT_PUBLIC_PHONE_DISPLAY ?? "081-2829-3556",
+    tel: process.env.NEXT_PUBLIC_PHONE_TEL ?? "+2348128293556",
+  },
   whatsapp: {
-    href: "https://wa.me/2348128293556?text=Hello%20Zenith%20Wills%2C%20I%27d%20like%20to%20book%20a%20service.",
+    href: `https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER ?? "2348128293556"}?text=Hello%20Zenith%20Wills%2C%20I%27d%20like%20to%20book%20a%20service.`,
     label: "Chat on WhatsApp",
   },
+  address: {
+    street:
+      process.env.NEXT_PUBLIC_ADDRESS_STREET ?? "Lagos-Badagry Expressway",
+    locality: process.env.NEXT_PUBLIC_ADDRESS_LOCALITY ?? "Ojo",
+    region: process.env.NEXT_PUBLIC_ADDRESS_REGION ?? "Lagos State",
+    country: process.env.NEXT_PUBLIC_ADDRESS_COUNTRY ?? "NG",
+    countryName: "Nigeria",
+  },
+  social: [
+    {
+      name: "TikTok",
+      icon: "tiktok",
+      href: `https://www.tiktok.com/@${socialHandle}`,
+    },
+    {
+      name: "Instagram",
+      icon: "instagram",
+      href: `https://www.instagram.com/${socialHandle}`,
+    },
+    {
+      name: "Facebook",
+      icon: "facebook",
+      href: `https://www.facebook.com/${socialHandle}`,
+    },
+    { name: "X", icon: "x", href: `https://x.com/${socialHandle}` },
+  ],
+  areasServed: (
+    process.env.NEXT_PUBLIC_AREAS_SERVED ??
+    "Badagry,Egan,Ikotun,Alimosho,LASU,Mile 2,Lagos"
+  )
+    .split(",")
+    .map((s) => s.trim()),
+  faqs: [
+    {
+      question: "Which areas do you serve?",
+      answer:
+        "We serve Lagos and its surroundings — including Badagry, Egan, Ikotun, Alimosho, LASU, Mile 2 and every corner of Lagos. If you're nearby, reach out and we'll confirm we can reach you.",
+    },
+    {
+      question: "How much does an installation cost?",
+      answer:
+        "It depends on your space and what you need. We assess your site and give you a clear, itemised quote before any work begins — no surprises.",
+    },
+    {
+      question: "How do I book a service?",
+      answer:
+        "Message us on WhatsApp or call 081-2829-3556. We'll arrange a site assessment, then send a clear quote.",
+    },
+    {
+      question: "Do you provide after-install support?",
+      answer:
+        "Yes. We stay reachable once the job is done, for follow-up and support when you need it.",
+    },
+    {
+      question: "Can I monitor my system from my phone?",
+      answer:
+        "Where the system supports it — CCTV live view and GPS tracking — we set it up and show you how to monitor it from your phone.",
+    },
+    {
+      question: "Do you work with businesses and estates?",
+      answer:
+        "Yes. We install for homes, offices and estates across Lagos.",
+    },
+  ],
   nav: [
     { label: "Home", href: "/" },
     { label: "Services", href: "/services" },

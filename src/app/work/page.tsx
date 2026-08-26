@@ -9,7 +9,8 @@ import { Cta } from "@/components/sections/cta";
 export const metadata: Metadata = {
   title: "Our Work",
   description:
-    "Recent installations by Zenith Wills Technologies — solar, CCTV, tracking, intercom and networking.",
+    "Recent solar, CCTV, tracking, intercom and networking installations by Zenith Wills Technologies across Lagos and its surroundings.",
+  alternates: { canonical: "/work" },
 };
 
 export default function WorkPage() {

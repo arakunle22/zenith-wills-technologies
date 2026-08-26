@@ -17,7 +17,8 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Solar inverters, CCTV cameras, car trackers, intercoms and system networking — professionally installed across Nigeria by Zenith Wills Technologies.",
+    "Solar inverter, CCTV, car tracking, intercom and networking installation across Lagos — Badagry, Egan, Ikotun, Alimosho, LASU, Mile 2 and beyond.",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {
@@ -80,6 +81,7 @@ export default function ServicesPage() {
                           src={s.image}
                           alt={s.title}
                           fill
+                          sizes="(max-width: 1024px) 100vw, 50vw"
                           className="object-cover"
                         />
                       </div>

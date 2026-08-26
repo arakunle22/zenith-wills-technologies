@@ -12,7 +12,8 @@ import { site } from "@/config/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Zenith Wills Technologies is a professional installation company serving homes, offices and estates across Nigeria.",
+    "Zenith Wills Technologies is a professional installation company serving homes, offices and estates across Lagos — Badagry, Egan, Ikotun, Alimosho, LASU, Mile 2 and beyond.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
