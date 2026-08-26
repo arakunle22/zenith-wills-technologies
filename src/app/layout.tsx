@@ -76,6 +76,7 @@ const structuredData = {
       name: site.name,
       url: site.url,
       logo: `${site.url}/logo.png`,
+      image: `${site.url}/logo.png`,
       sameAs: site.social.map((s) => s.href),
       description: site.description,
       telephone: site.phone.tel,
@@ -84,6 +85,7 @@ const structuredData = {
         streetAddress: site.address.street,
         addressLocality: site.address.locality,
         addressRegion: site.address.region,
+        postalCode: site.address.postalCode,
         addressCountry: site.address.country,
       },
       contactPoint: {
@@ -109,6 +111,7 @@ const structuredData = {
         streetAddress: site.address.street,
         addressLocality: site.address.locality,
         addressRegion: site.address.region,
+        postalCode: site.address.postalCode,
         addressCountry: site.address.country,
       },
       areaServed: site.areasServed.map((name) => ({

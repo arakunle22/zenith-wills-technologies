@@ -23,6 +23,7 @@ export const site = {
       process.env.NEXT_PUBLIC_ADDRESS_STREET ?? "Lagos-Badagry Expressway",
     locality: process.env.NEXT_PUBLIC_ADDRESS_LOCALITY ?? "Ojo",
     region: process.env.NEXT_PUBLIC_ADDRESS_REGION ?? "Lagos State",
+    postalCode: process.env.NEXT_PUBLIC_ADDRESS_POSTAL_CODE ?? "102101",
     country: process.env.NEXT_PUBLIC_ADDRESS_COUNTRY ?? "NG",
     countryName: "Nigeria",
   },
