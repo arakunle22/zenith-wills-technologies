@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Space_Grotesk, Inter } from "next/font/google";
 import { site } from "@/config/site";
 import { ScrollProgress } from "@/components/scroll-progress";
@@ -89,6 +90,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         {children}
         <ScrollProgress />
       </body>
+      {process.env.NODE_ENV === "production" &&
+        process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        )}
     </html>
   );
 }
