@@ -14,6 +14,7 @@ export function Hero() {
           alt="Solar panel installation"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/80 via-ink/55 to-ink/85" />

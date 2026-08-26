@@ -25,7 +25,7 @@ export function PageHeader({
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0">
-        <Image src={image} alt="" fill priority className="object-cover" />
+        <Image src={image} alt="" fill priority sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/85 via-ink/60 to-ink/85" />
       </div>
       <Container className="relative pb-16 pt-32 sm:pb-20 sm:pt-40">
