@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Phone } from "lucide-react";
+import { MapPin, Phone } from "lucide-react";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
@@ -79,6 +79,23 @@ export default function ContactPage() {
                 </div>
               </Reveal>
             </div>
+
+            <Reveal delay={0.08}>
+              <div className="mt-5 flex items-center gap-4 rounded-2xl border border-line bg-white p-6">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <MapPin className="h-6 w-6" />
+                </div>
+                <div>
+                  <h2 className="font-display text-lg font-bold text-ink">
+                    Visit us
+                  </h2>
+                  <p className="mt-1 text-sm leading-relaxed text-mist">
+                    {site.address.street}, {site.address.locality},{" "}
+                    {site.address.region}, {site.address.countryName}
+                  </p>
+                </div>
+              </div>
+            </Reveal>
 
             <Reveal delay={0.12}>
               <p className="mt-8 text-center text-sm text-mist">

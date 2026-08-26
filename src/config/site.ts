@@ -16,9 +16,12 @@ export const site = {
     label: "Chat on WhatsApp",
   },
   address: {
-    locality: process.env.NEXT_PUBLIC_ADDRESS_LOCALITY ?? "Lagos",
+    street:
+      process.env.NEXT_PUBLIC_ADDRESS_STREET ?? "Lagos-Badagry Expressway",
+    locality: process.env.NEXT_PUBLIC_ADDRESS_LOCALITY ?? "Ojo",
     region: process.env.NEXT_PUBLIC_ADDRESS_REGION ?? "Lagos State",
     country: process.env.NEXT_PUBLIC_ADDRESS_COUNTRY ?? "NG",
+    countryName: "Nigeria",
   },
   areasServed: (
     process.env.NEXT_PUBLIC_AREAS_SERVED ??

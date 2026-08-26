@@ -79,6 +79,7 @@ const structuredData = {
       telephone: site.phone.tel,
       address: {
         "@type": "PostalAddress",
+        streetAddress: site.address.street,
         addressLocality: site.address.locality,
         addressRegion: site.address.region,
         addressCountry: site.address.country,
@@ -102,6 +103,7 @@ const structuredData = {
       priceRange: "$$",
       address: {
         "@type": "PostalAddress",
+        streetAddress: site.address.street,
         addressLocality: site.address.locality,
         addressRegion: site.address.region,
         addressCountry: site.address.country,
