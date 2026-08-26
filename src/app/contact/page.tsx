@@ -13,7 +13,8 @@ import { site } from "@/config/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Book a service or ask a question — reach Zenith Wills Technologies on WhatsApp or by phone.",
+    "Book a solar, CCTV, car tracking, intercom or networking installation in Lagos — reach Zenith Wills Technologies on WhatsApp or by phone.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
