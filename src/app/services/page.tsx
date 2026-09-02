@@ -17,7 +17,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Solar inverter, CCTV, car tracking, intercom and networking installation across Lagos — Badagry, Egan, Ikotun, Alimosho, LASU, Mile 2 and beyond.",
+    "Solar inverter, CCTV, car tracking, intercom and networking installation across Lagos — Victoria Island, Lekki, Ikoyi, Badagry, Egan, Ikotun, Alimosho, LASU, Mile 2 and beyond.",
   alternates: { canonical: "/services" },
 };
 

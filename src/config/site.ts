@@ -20,9 +20,10 @@ export const site = {
   },
   address: {
     street:
-      process.env.NEXT_PUBLIC_ADDRESS_STREET ?? "Lagos-Badagry Expressway",
-    locality: process.env.NEXT_PUBLIC_ADDRESS_LOCALITY ?? "Ojo",
+      process.env.NEXT_PUBLIC_ADDRESS_STREET ?? "Victoria Island",
+    locality: process.env.NEXT_PUBLIC_ADDRESS_LOCALITY ?? "Victoria Island",
     region: process.env.NEXT_PUBLIC_ADDRESS_REGION ?? "Lagos State",
+    postalCode: process.env.NEXT_PUBLIC_ADDRESS_POSTAL_CODE ?? "101241",
     country: process.env.NEXT_PUBLIC_ADDRESS_COUNTRY ?? "NG",
     countryName: "Nigeria",
   },
@@ -46,7 +47,7 @@ export const site = {
   ],
   areasServed: (
     process.env.NEXT_PUBLIC_AREAS_SERVED ??
-    "Badagry,Egan,Ikotun,Alimosho,LASU,Mile 2,Lagos"
+    "Victoria Island,Lekki,Ikoyi,Lagos Island,Badagry,Egan,Ikotun,Alimosho,LASU,Mile 2,Ikeja,Surulere,Lagos"
   )
     .split(",")
     .map((s) => s.trim()),
@@ -54,7 +55,7 @@ export const site = {
     {
       question: "Which areas do you serve?",
       answer:
-        "We serve Lagos and its surroundings — including Badagry, Egan, Ikotun, Alimosho, LASU, Mile 2 and every corner of Lagos. If you're nearby, reach out and we'll confirm we can reach you.",
+        "We serve clients across Lagos — including Victoria Island (VI), Lekki, Ikoyi, Badagry, Egan, Ikotun, Alimosho, LASU, Mile 2, and all surrounding areas. Wherever you are located in Lagos, contact us to schedule a site assessment and prompt installation.",
     },
     {
       question: "How much does an installation cost?",

@@ -12,7 +12,7 @@ import { Cta } from "@/components/sections/cta";
 
 export const metadata: Metadata = {
   description:
-    "Solar inverter, CCTV, car tracking, intercom and networking installation across Lagos — Badagry, Egan, Ikotun, Alimosho, LASU, Mile 2 and beyond. Professional installs, clear quotes.",
+    "Solar inverter, CCTV, car tracking, intercom and networking installation across Lagos — Victoria Island, Lekki, Ikoyi, Badagry, Egan, Ikotun, Alimosho, LASU, Mile 2 and beyond. Professional installs, clear quotes.",
   alternates: { canonical: "/" },
 };
 

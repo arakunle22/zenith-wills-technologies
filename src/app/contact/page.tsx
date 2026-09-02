@@ -13,7 +13,7 @@ import { site } from "@/config/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Book a solar, CCTV, car tracking, intercom or networking installation in Lagos — reach Zenith Wills Technologies on WhatsApp or by phone.",
+    "Book solar, CCTV, car tracking, intercom or networking installation in Victoria Island, Badagry, Egan, Ikotun, Alimosho, LASU, Mile 2 and across Lagos — reach Zenith Wills Technologies on WhatsApp or by phone.",
   alternates: { canonical: "/contact" },
 };
 
@@ -87,7 +87,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h2 className="font-display text-lg font-bold text-ink">
-                    Visit us
+                    Primary Office
                   </h2>
                   <p className="mt-1 text-sm leading-relaxed text-mist">
                     {site.address.street}, {site.address.locality},{" "}
