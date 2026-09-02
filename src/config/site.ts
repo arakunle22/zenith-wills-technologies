@@ -51,23 +51,6 @@ export const site = {
   )
     .split(",")
     .map((s) => s.trim()),
-  coverageZones: [
-    {
-      region: "Island & Lekki Axis",
-      description: "Fast-dispatch installation team for homes, corporate offices, and estates.",
-      places: ["Victoria Island (VI)", "Lekki Phase 1 & 2", "Ikoyi", "Lagos Island", "Oniru"],
-    },
-    {
-      region: "West & Badagry Corridor",
-      description: "Dedicated technicians covering residential properties, schools, and commercial sites.",
-      places: ["Badagry", "LASU / Ojo Axis", "Mile 2", "Festac", "Iba", "Trade Fair"],
-    },
-    {
-      region: "Mainland & Alimosho Axis",
-      description: "Active deployment across major Mainland hubs and expanding residential communities.",
-      places: ["Alimosho", "Ikotun", "Egan", "Egbeda", "Ikeja", "Surulere"],
-    },
-  ],
   faqs: [
     {
       question: "Which areas do you serve?",

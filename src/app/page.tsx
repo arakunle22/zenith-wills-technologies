@@ -7,7 +7,6 @@ import { Services } from "@/components/sections/services";
 import { Showcase } from "@/components/sections/showcase";
 import { WhyUs } from "@/components/sections/why-us";
 import { Process } from "@/components/sections/process";
-import { Coverage } from "@/components/sections/coverage";
 import { Faq } from "@/components/sections/faq";
 import { Cta } from "@/components/sections/cta";
 
@@ -27,7 +26,6 @@ export default function Home() {
         <Showcase />
         <WhyUs />
         <Process />
-        <Coverage />
         <Faq />
         <Cta />
       </main>
